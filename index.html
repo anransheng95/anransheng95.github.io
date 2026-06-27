@@ -89,11 +89,14 @@
         .nav-links a:hover { color: var(--color-accent); }
 
         .hero {
-            padding: 3rem 0 2.2rem;
+            padding: 3.2rem 0 2.4rem;
             display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 2rem;
+            grid-template-columns: 250px 1fr;
+            gap: 2.6rem;
             align-items: start;
+        }
+        .profile-card {
+            text-align: center;
         }
         .hero-photo {
             width: 220px;
@@ -101,6 +104,30 @@
             object-fit: cover;
             border-radius: 50%;
             box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .profile-name {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            line-height: 1.15;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        .profile-summary {
+            margin-top: 0.45rem;
+            color: var(--color-muted);
+            font-size: 0.94rem;
+            line-height: 1.55;
+        }
+        .hero-main {
+            padding-top: 0.2rem;
+        }
+        .hero-kicker {
+            color: var(--color-accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
         }
         .hero h1 {
             font-family: var(--font-heading);
@@ -111,6 +138,11 @@
         .affiliation {
             color: var(--color-muted);
             margin-bottom: 1rem;
+        }
+        .research-statement {
+            font-size: 1.06rem;
+            line-height: 1.72;
+            max-width: 610px;
         }
         .hero-contact {
             margin-top: 0.8rem;
@@ -132,6 +164,27 @@
             border-radius: 999px;
             color: var(--color-muted);
             background: #fff;
+        }
+        .focus-list {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+        .focus-item {
+            border-left: 2px solid var(--color-border);
+            padding-left: 0.85rem;
+        }
+        .focus-item strong {
+            display: block;
+            font-size: 0.9rem;
+            line-height: 1.35;
+        }
+        .focus-item span {
+            color: var(--color-muted);
+            display: block;
+            font-size: 0.93rem;
+            line-height: 1.55;
+            margin-top: 0.1rem;
         }
 
         section {
@@ -204,7 +257,7 @@
             .hero {
                 grid-template-columns: 1fr;
                 text-align: center;
-                gap: 1.2rem;
+                gap: 1.5rem;
             }
             .hero-photo {
                 margin: 0 auto;
@@ -214,6 +267,8 @@
             .hero h1 { font-size: 2rem; }
             .hero-contact a { margin-right: 0.7rem; }
             .pill-list { justify-content: center; }
+            .research-statement { margin: 0 auto; }
+            .focus-list { text-align: left; }
         }
     </style>
 </head>
@@ -233,28 +288,54 @@
 
 <div class="container">
     <div class="hero">
-        <img class="hero-photo" src="./assets:images:profile.webp.JPG" alt="Photo of Anran Sheng">
-            <h1>Anran (Ariel) Sheng</h1>
-            <div class="affiliation">
-                <!-- PhD Applicant in Strategic Management<br>                 -->
-                Incoming Master of Science in International Political Economy (IPE) student at the S. Rajaratnam School of International Studies (RSIS), Nanyang Technological University (NTU), Singapore, Fall 2026.<br>
-                AI, Institutions, and Organizational Governance (China and Asia)
+        <div class="profile-card">
+            <img class="hero-photo" src="./assets:images:profile.webp.JPG" alt="Photo of Anran Sheng">
+            <div class="profile-name">Anran (Ariel) Sheng</div>
+            <div class="profile-summary">
+                Incoming M.Sc. student in International Political Economy, RSIS, Nanyang Technological University, Singapore.
             </div>
-            <p>
-                I study how <strong>AI transforms institutions and organizations</strong>, with a focus on governance systems,
-                decision rights, and strategic adaptation in China and broader Asian contexts.
-            </p>
             <div class="hero-contact">
-                <a href="mailto:anransheng95@gmail.com">anransheng95@gmail.com</a>
+                <a href="mailto:anran004@e.ntu.edu.sg">Email</a>
                 <a href="https://www.linkedin.com/in/anran-sheng-9b405b295/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <span>Singapore</span>
             </div>
+        </div>
+
+        <div class="hero-main">
+            <div class="hero-kicker">International Political Economy, AI, and Institutional Change</div>
+            <h1>Anran (Ariel) Sheng</h1>
+            <div class="affiliation">
+                S. Rajaratnam School of International Studies (RSIS), Nanyang Technological University (NTU), Singapore
+            </div>
+            <p class="research-statement">
+                I study how <strong>AI and digital transformation reshape political-economic institutions</strong>,
+                with a focus on state-market relations, regulatory governance, industrial upgrading, and institutional
+                adaptation in China and Asia. My work connects international political economy, technology governance,
+                and institutional analysis to understand how firms, regulators, and public institutions respond to
+                technological change under competition, geopolitical pressure, and shifting policy priorities.
+            </p>
+
+            <div class="focus-list" aria-label="Research focus areas">
+                <div class="focus-item">
+                    <strong>State-market relations</strong>
+                    <span>How policy, regulation, and market incentives shape AI adoption and industrial transformation.</span>
+                </div>
+                <div class="focus-item">
+                    <strong>Technology governance</strong>
+                    <span>How public and private actors allocate accountability, risk, and decision authority around AI systems.</span>
+                </div>
+                <div class="focus-item">
+                    <strong>China and Asian political economy</strong>
+                    <span>How institutional arrangements mediate digital strategy, development priorities, and cross-border pressures.</span>
+                </div>
+            </div>
+
             <div class="pill-list">
-                <span class="pill">Strategic Management</span>
-                <span class="pill">Institutional Theory</span>
-                <span class="pill">AI Governance</span>
-                <span class="pill">Behavioral Strategy</span>
-                <span class="pill">Dynamic Capabilities</span>
+                <span class="pill">International Political Economy</span>
+                <span class="pill">State-Market Relations</span>
+                <span class="pill">Technology Governance</span>
+                <span class="pill">China and Asia</span>
+                <span class="pill">Institutional Change</span>
             </div>
         </div>
     </div>
@@ -265,39 +346,40 @@
         <h2>Research Agenda</h2>
 
         <div class="jm-banner">
-            <strong>Current focus:</strong> PhD and RA positions in Strategic Management,
-            centered on AI, institutional change, and organizational governance.
+            <strong>Current focus:</strong> graduate research in International Political Economy,
+            centered on AI, technology governance, institutional change, and China/Asia.
         </div>
 
         <div class="paper">
-            <div class="paper-title">AI, Institutions, and Strategic Adaptation in China</div>
+            <div class="paper-title">AI, Technology Governance, and Institutional Adaptation in China</div>
             <p>
-                My proposed doctoral research examines how AI adoption reshapes formal rules, governance structures,
-                and professional routines inside organizations. I am particularly interested in when AI improves
-                organizational capability and legitimacy, and when it amplifies risk or creates superficial compliance.
+                My proposed research examines how AI adoption interacts with political-economic institutions,
+                regulatory priorities, and development strategies. I am particularly interested in how technology
+                policy changes incentives for firms and public organizations, and when digital transformation
+                strengthens capacity, shifts risk, or creates new forms of institutional dependence.
             </p>
         </div>
 
         <h3 class="subheading">Research Interests</h3>
         <ul class="detail-list">
-            <li>Institutional response to AI-driven change under competition, regulation, and state priorities.</li>
-            <li>AI and organizational governance, including controls, accountability, and decision rights.</li>
-            <li>Cross-cultural and Asian comparisons in AI strategy.</li>
+            <li>Political economy of AI adoption under competition, regulation, and state development priorities.</li>
+            <li>Technology governance, including accountability, risk allocation, and public-private coordination.</li>
+            <li>China and Asian comparative political economy, especially digital strategy and institutional adaptation.</li>
         </ul>
 
         <h3 class="subheading">Methods and Data Strategy</h3>
         <ul class="detail-list">
             <li>Quantitative strategy: panel-data analysis and quasi-experimental logic when identification allows.</li>
-            <li>Text-based analysis: policy documents, annual reports, and managerial communications.</li>
+            <li>Text-based analysis: policy documents, annual reports, public communications, and regulatory materials.</li>
             <li>Qualitative strategy: interviews and process tracing to identify mechanisms.</li>
-            <li>Empirical contexts: Chinese organizations, with comparative extensions across Asia.</li>
+            <li>Empirical contexts: Chinese firms and public institutions, with comparative extensions across Asia.</li>
         </ul>
 
         <h3 class="subheading">Research Preparation Highlights</h3>
         <ul class="detail-list">
             <li>National-level undergraduate research grant participant (2015).</li>
             <li>Co-authored publication on policy and market mechanisms in China's new energy vehicle adoption.</li>
-            <li>Graduate thesis research on performance appraisal and organizational incentive design in banking.</li>
+            <li>Graduate thesis research on incentive design, governance, and performance evaluation in banking.</li>
         </ul>
     </div>
 </section>
@@ -307,18 +389,18 @@
         <h2>Working Papers in Development</h2>
 
         <div class="paper">
-            <div class="paper-title">AI Adoption Under Institutional Pressure: Evidence from Chinese Organizational Processes</div>
+            <div class="paper-title">AI Adoption Under Institutional Pressure: Evidence from China's Political Economy</div>
             <p>
-                This project studies how organizations implement AI when market incentives,
-                regulatory requirements, and legitimacy concerns interact.
+                This project studies how firms and public institutions implement AI when market incentives,
+                regulatory requirements, state priorities, and legitimacy concerns interact.
             </p>
         </div>
 
         <div class="paper">
-            <div class="paper-title">Governance by Design: Decision Rights and Accountability in AI-Enabled Workflow Redesign</div>
+            <div class="paper-title">Governance by Design: Accountability and Risk in AI-Enabled Public and Private Institutions</div>
             <p>
-                This study examines how AI-enabled redesign of operational workflows changes control architecture,
-                escalation mechanisms, and the boundary between human and system discretion.
+                This study examines how AI-enabled workflow redesign changes accountability structures,
+                risk allocation, and the boundary between administrative, managerial, and system discretion.
             </p>
         </div>
     </div>
@@ -346,7 +428,7 @@
             <ul class="detail-list">
                 <li>Program focus: International Political Economy with interdisciplinary training across global political and economic systems.</li>
                 <li>Funding status: partial funding awarded for graduate study beginning Fall 2026.</li>
-                <li>Academic objective: strengthen political-economy foundations for future PhD research on institutions, governance, and strategy.</li>
+                <li>Academic objective: strengthen political-economy foundations for future research on institutions, technology governance, and Asia.</li>
             </ul>
         </div>
 
@@ -355,9 +437,9 @@
             <div class="paper-authors">Jilin University, Changchun, China</div>
             <ul class="detail-list">
                 <li>Thesis: Performance Appraisal System Optimization for Corporate Customer Managers.</li>
-                <li>Degree orientation: accounting analytics, governance mechanisms, and organizational performance evaluation.</li>
+                <li>Degree orientation: accounting analytics, financial governance, and institutional performance evaluation.</li>
                 <li>Selected coursework: Management Information Systems (99), Advanced Financial Accounting (93), Advanced Auditing (89), Financial Statement Analysis (88).</li>
-                <li>Research emphasis: linking incentive and appraisal systems to measurable managerial outcomes in financial institutions.</li>
+                <li>Research emphasis: linking incentive and appraisal systems to governance outcomes in financial institutions.</li>
                 <li>Award: University Scholarships.</li>
             </ul>
         </div>
@@ -368,7 +450,7 @@
             <ul class="detail-list">
                 <li>Foundational training: microeconomics, macroeconomics, econometrics, international finance, and trade policy.</li>
                 <li>Selected coursework: International Finance (94), International Trade Theory (92), International Trade Practice (91), Introduction to World Economy (92).</li>
-                <li>Supplementary strengths: quantitative reasoning for policy and market analysis in cross-border contexts.</li>
+                <li>Supplementary strengths: quantitative reasoning for policy, markets, and cross-border economic analysis.</li>
                 <li>Awards: University Scholarships, Outstanding Graduate.</li>
                 <li>Cohort performance: ranked 3rd of 39.</li>
             </ul>
@@ -398,7 +480,7 @@
                 <li>Managed domestic and international reimbursements, cross-border payments, and compliance-sensitive financial workflows.</li>
                 <li>Prepared and checked journal entries, reconciliations, and month-end reporting support materials.</li>
                 <li>Coordinated finance operations across faculty, administrative, and policy-governance stakeholders.</li>
-                <li>Observed AI-related process redesign in institutional service and approval systems.</li>
+                <li>Observed digital process redesign in public institutional service, approval, and compliance systems.</li>
             </ul>
         </div>
 
